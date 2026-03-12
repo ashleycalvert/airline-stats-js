@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CELPIP Speaking Templates — CLB 10+</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #13161e;
+    --card: #1a1e28;
+    --border: #252a38;
+    --accent: #c8a96e;
+    --accent2: #5b8dee;
+    --accent3: #4ecb8d;
+    --accent4: #e05c7a;
+    --text: #e8eaf0;
+    --muted: #7a8099;
+    --tag-open: #1e3a2f;
+    --tag-open-text: #4ecb8d;
+    --tag-mid: #1e2e4a;
+    --tag-mid-text: #5b8dee;
+    --tag-close: #3a1e28;
+    --tag-close-text: #e05c7a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0d0f14 0%, #161a26 50%, #0d1220 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 40px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(200,169,110,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 30%;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(91,141,238,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .header-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .header h1 span { color: var(--accent); }
+  .header-sub {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 600px;
+  }
+  .badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .badge-gold { background: rgba(200,169,110,0.15); color: var(--accent); border: 1px solid rgba(200,169,110,0.3); }
+  .badge-blue { background: rgba(91,141,238,0.15); color: var(--accent2); border: 1px solid rgba(91,141,238,0.3); }
+  .badge-green { background: rgba(78,203,141,0.15); color: var(--accent3); border: 1px solid rgba(78,203,141,0.3); }
+
+  /* LEGEND */
+  .legend {
+    max-width: 1100px;
+    margin: 24px auto 0;
+    padding: 0 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 2px;
+  }
+
+  /* NAV TABS */
+  .nav-wrapper {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav-tab {
+    padding: 14px 18px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.3px;
+  }
+  .nav-tab:hover { color: var(--text); }
+  .nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .nav-tab .task-num {
+    display: inline-block;
+    width: 18px; height: 18px;
+    background: var(--border);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 18px;
+    margin-right: 6px;
+    transition: background 0.2s;
+  }
+  .nav-tab.active .task-num { background: var(--accent); color: var(--bg); }
+
+  /* MAIN CONTENT */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 40px 80px;
+  }
+
+  /* TASK PANEL */
+  .task-panel { display: none; }
+  .task-panel.active { display: block; }
+
+  .task-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .task-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .task-desc {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 580px;
+  }
+  .task-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+  .meta-pill {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .prep { background: rgba(91,141,238,0.12); color: var(--accent2); border: 1px solid rgba(91,141,238,0.2); }
+  .speak { background: rgba(200,169,110,0.12); color: var(--accent); border: 1px solid rgba(200,169,110,0.2); }
+
+  /* SCENARIO TABS */
+  .scenarios-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .scenario-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .s-tab {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    transition: all 0.15s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .s-tab:hover { border-color: var(--accent); color: var(--text); }
+  .s-tab.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+  /* TEMPLATE BLOCKS */
+  .template-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .template-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .block-header {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .block-tag {
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .opening .block-tag { background: var(--tag-open); color: var(--tag-open-text); }
+  .middle .block-tag { background: var(--tag-mid); color: var(--tag-mid-text); }
+  .closing .block-tag { background: var(--tag-close); color: var(--tag-close-text); }
+  .block-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .block-body {
+    padding: 20px;
+  }
+
+  /* TEMPLATE TEXT */
+  .template-text {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+  .template-text p { margin-bottom: 12px; }
+  .template-text p:last-child { margin-bottom: 0; }
+
+  /* FILL-IN BLANKS */
+  .fill {
+    display: inline-block;
+    background: rgba(200,169,110,0.12);
+    border: 1px solid rgba(200,169,110,0.25);
+    border-radius: 4px;
+    padding: 1px 6px;
+    color: var(--accent);
+    font-weight: 500;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+  }
+
+  /* VARIANTS */
+  .variants {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .variants-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .variant-item {
+    padding: 10px 14px;
+    background: var(--surface);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 8px;
+    border-left: 3px solid var(--border);
+    line-height: 1.65;
+  }
+  .variant-item:last-child { margin-bottom: 0; }
+  .variant-item.v-open { border-left-color: var(--accent3); }
+  .variant-item.v-mid { border-left-color: var(--accent2); }
+  .variant-item.v-close { border-left-color: var(--accent4); }
+
+  /* KEY PHRASES */
+  .phrases-box {
+    margin-top: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .phrases-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 12px;
+  }
+  .phrase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 8px;
+  }
+  .phrase-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    color: var(--text);
+  }
+
+  /* SCORING NOTE */
+  .score-note {
+    background: rgba(200,169,110,0.06);
+    border: 1px solid rgba(200,169,110,0.15);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-top: 24px;
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .score-note strong { color: var(--accent); font-weight: 500; }
+
+  /* SCENARIO CONTENT */
+  .scenario-content { display: none; }
+  .scenario-content.active { display: block; }
+
+  /* RESPONSIVE */
+  @media (max-width: 700px) {
+    .header, .main { padding-left: 20px; padding-right: 20px; }
+    .nav { padding: 0 20px; }
+    .legend { padding: 0 20px; }
+    .task-header { grid-template-columns: 1fr; }
+    .task-meta { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+    .phrase-grid { grid-template-columns: 1fr; }
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+  }
+
+  .tip-box {
+    display: flex;
+    gap: 12px;
+    background: rgba(78,203,141,0.06);
+    border: 1px solid rgba(78,203,141,0.15);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: var(--text);
+    align-items: flex-start;
+    line-height: 1.7;
+  }
+  .tip-icon { color: var(--accent3); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-label">CELPIP General — Speaking Section</div>
+    <h1>Response <span>Templates</span><br>& Strategy Guide</h1>
+    <p class="header-sub">Reusable frameworks for all 8 speaking tasks, targeting CLB Level 10–12 based on official CELPIP scoring descriptors.</p>
+    <div class="badges">
+      <span class="badge badge-gold">CLB Level 10–12 Target</span>
+      <span class="badge badge-blue">All 8 Tasks Covered</span>
+      <span class="badge badge-green">Official Descriptor Aligned</span>
+    </div>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--accent3)"></div>Opening</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--accent2)"></div>Middle / Development</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--accent4)"></div>Closing</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div><span class="fill" style="font-size:10px">Fill-in slot</span> = adapt to your topic</div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrapper">
+  <div class="nav">
+    <button class="nav-tab active" onclick="showTask(0)"><span class="task-num">1</span>Giving Advice</button>
+    <button class="nav-tab" onclick="showTask(1)"><span class="task-num">2</span>Personal Experience</button>
+    <button class="nav-tab" onclick="showTask(2)"><span class="task-num">3</span>Describing a Scene</button>
+    <button class="nav-tab" onclick="showTask(3)"><span class="task-num">4</span>Making Predictions</button>
+    <button class="nav-tab" onclick="showTask(4)"><span class="task-num">5</span>Comparing & Persuading</button>
+    <button class="nav-tab" onclick="showTask(5)"><span class="task-num">6</span>Difficult Situation</button>
+    <button class="nav-tab" onclick="showTask(6)"><span class="task-num">7</span>Expressing Opinions</button>
+    <button class="nav-tab" onclick="showTask(7)"><span class="task-num">8</span>Unusual Situation</button>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ===================== TASK 1 ===================== -->
+<div class="task-panel active" id="task-0">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 1 — Giving Advice</div>
+      <p class="task-desc">A friend or acquaintance has a problem and needs your guidance. Offer thoughtful, structured advice drawing on empathy and practical reasoning.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 30 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 90 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> Acknowledge the person's feelings first, then give 2–3 concrete pieces of advice with reasoning. Use hedged, nuanced language (rather than commands). Close with an encouraging offer of continued support. Aim for <em>moderately demanding non-routine</em> register throughout.</span>
+  </div>
+
+  <div class="scenarios-label">Common Scenario Types</div>
+  <div class="scenario-tabs">
+    <button class="s-tab active" onclick="showScenario('t1', 0)">Career / Work</button>
+    <button class="s-tab" onclick="showScenario('t1', 1)">Relationships</button>
+    <button class="s-tab" onclick="showScenario('t1', 2)">Financial / Housing</button>
+    <button class="s-tab" onclick="showScenario('t1', 3)">Health / Lifestyle</button>
+    <button class="s-tab" onclick="showScenario('t1', 4)">Moving / Relocation</button>
+  </div>
+
+  <!-- Scenario 0: Career -->
+  <div class="scenario-content active" id="t1-s0">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Acknowledge + Frame (5–10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>I completely understand how stressful this situation must be for you, and I really appreciate you reaching out. Based on what you've shared, I have a few thoughts that I hope will be helpful as you navigate this.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternative Openings</div>
+            <div class="variant-item v-open">That sounds like a genuinely difficult position to be in, and I think there are some concrete steps you can take to improve the situation.</div>
+            <div class="variant-item v-open">I can see why you're feeling conflicted about this — it's not a straightforward decision, but let me share what I would consider if I were in your shoes.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">2–3 Pieces of Advice with Reasons (60–70 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>First and foremost, I'd suggest <span class="fill">[Advice #1 — e.g., having an honest conversation with your manager about your concerns]</span>. The reason I recommend this is that <span class="fill">[Reason — e.g., unaddressed frustrations tend to compound over time, and managers often appreciate directness more than people expect]</span>. You might approach it by <span class="fill">[specific tactic — e.g., requesting a private meeting and framing it around your professional growth]</span>.</p>
+            <p>Beyond that, it would also be worth <span class="fill">[Advice #2 — e.g., updating your resume and quietly exploring other opportunities]</span>. This isn't about being disloyal — it's about giving yourself options and a clearer sense of your own market value. Even if you ultimately decide to stay, knowing what's out there can be quite empowering.</p>
+            <p>Finally, I'd encourage you to <span class="fill">[Advice #3 — e.g., set yourself a clear timeline — say, three months — and then reassess how things have changed]</span>. Having a concrete benchmark will prevent the situation from dragging on indefinitely, which can really affect your morale and productivity.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Advice Connector Phrases</div>
+            <div class="variant-item v-mid">One thing I would prioritize is... / What I think matters most here is...</div>
+            <div class="variant-item v-mid">Another avenue worth considering is... / On top of that, it might also help to...</div>
+            <div class="variant-item v-mid">The reason I say this is... / My thinking behind that is... / This is important because...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Encourage + Offer Support (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>I know none of this is easy, but I genuinely believe you have the resilience and skills to come through this stronger. Please don't hesitate to reach out if you want to talk things through further — I'm always happy to help.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternative Closings</div>
+            <div class="variant-item v-close">Whatever you decide, just know that you don't have to figure this out alone. I'm rooting for you.</div>
+            <div class="variant-item v-close">I hope some of that is useful. Trust your instincts — you know the situation better than anyone.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenario 1: Relationships -->
+  <div class="scenario-content" id="t1-s1">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Acknowledge + Empathize</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>That sounds like a really emotionally draining situation, and I want you to know that your feelings are completely valid. Let me share a few thoughts that might help you find some clarity.</p></div>
+        </div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Advice Development</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>The first thing I'd suggest is <span class="fill">[e.g., giving yourself some space to reflect before making any major decisions]</span>. When emotions are running high, it's easy to say or do things we later regret, so a bit of distance can actually be incredibly clarifying.</p>
+            <p>I'd also recommend <span class="fill">[e.g., having an open and honest conversation — using "I feel" statements rather than accusations]</span>. This approach tends to lower defensiveness and opens the door to genuine dialogue. If direct conversation feels too charged, <span class="fill">[e.g., writing a letter or seeking the help of a counsellor]</span> can be a constructive alternative.</p>
+            <p>Ultimately, what matters most is <span class="fill">[e.g., your own well-being and sense of self-respect]</span>. Whatever path you choose, make sure it's one you can feel at peace with.</p>
+          </div>
+        </div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>Relationships are complicated, and there are no perfect answers here. But I think you already have a good sense of what you need — sometimes we just need someone else to remind us to trust that instinct. I'm here for you.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenario 2: Financial/Housing -->
+  <div class="scenario-content" id="t1-s2">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>Financial and housing decisions can feel overwhelming, especially when there's a lot at stake. I have some thoughts that might help you weigh your options more clearly.</p></div>
+        </div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>My first piece of advice would be to <span class="fill">[e.g., sit down and map out your complete financial picture — income, expenses, savings, and any upcoming costs]</span>. It sounds basic, but having everything written out makes it much easier to identify what's actually feasible.</p>
+            <p>From there, I'd strongly recommend <span class="fill">[e.g., speaking with a financial advisor or housing counsellor before committing to anything]</span>. Many of these services are free or low-cost, and a professional perspective can help you avoid costly mistakes that might not be obvious on the surface.</p>
+            <p>It might also be worth <span class="fill">[e.g., exploring government programs or community resources designed to support people in your situation]</span>. You might be surprised by the options available — many people simply aren't aware of them.</p>
+          </div>
+        </div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>These situations can feel isolating, but you're asking the right questions. Take it one step at a time, and don't be afraid to ask for help — that's what it's there for. I'm happy to help you research any of these options if that would be useful.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenario 3: Health/Lifestyle -->
+  <div class="scenario-content" id="t1-s3">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>I really appreciate you sharing something so personal. Health and lifestyle changes can be challenging, but the fact that you're thinking about this means you're already moving in the right direction.</p></div>
+        </div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>The first thing I'd encourage is <span class="fill">[e.g., consulting a doctor or healthcare professional before making any major changes]</span>. Everyone's body and circumstances are different, and professional guidance ensures that what you're doing is both safe and effective for you specifically.</p>
+            <p>I'd also suggest <span class="fill">[e.g., starting small — focusing on one sustainable change rather than overhauling everything at once]</span>. Research consistently shows that gradual adjustments are far more likely to stick than drastic overnight transformations.</p>
+            <p>Additionally, it can really help to <span class="fill">[e.g., build in accountability — whether through a friend, an app, or a community group]</span>. Having external motivation during the early stages makes a significant difference in maintaining momentum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>Progress isn't always linear, so please be patient with yourself. The important thing is consistency over time, not perfection every day. You've got this, and I'm cheering you on.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenario 4: Moving/Relocation -->
+  <div class="scenario-content" id="t1-s4">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>Moving is one of the most exciting yet stressful things a person can do, so I completely understand why you're feeling pulled in different directions. Let me share some thoughts that might make the decision — and the process — a little easier.</p></div>
+        </div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>Before anything else, I'd recommend <span class="fill">[e.g., making a detailed list of your priorities — proximity to work, school quality, cost of living, community — and then researching how different areas stack up]</span>. This transforms an abstract decision into a concrete comparison.</p>
+            <p>I'd also suggest <span class="fill">[e.g., visiting the area if at all possible, even for a weekend, before committing]</span>. Reading about a place and actually experiencing it are very different things, and first-hand impressions matter enormously.</p>
+            <p>Practically speaking, it would be wise to <span class="fill">[e.g., give yourself at least two months for the move itself, and start decluttering early]</span>. Most people underestimate how much time and energy the logistics require.</p>
+          </div>
+        </div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span></div>
+        <div class="block-body">
+          <div class="template-text"><p>Change can be daunting, but it can also be an incredible opportunity. I think you're going to handle this beautifully. Let me know if there's anything specific I can help you look into.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">CLB 10+ Vocabulary & Transitions for Task 1</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">First and foremost, I'd suggest...</div>
+      <div class="phrase-item">The reason I recommend this is...</div>
+      <div class="phrase-item">Beyond that, it would be worth...</div>
+      <div class="phrase-item">What I would prioritize is...</div>
+      <div class="phrase-item">On a practical level, consider...</div>
+      <div class="phrase-item">In the long run, this will...</div>
+      <div class="phrase-item">It's also worth bearing in mind...</div>
+      <div class="phrase-item">At the end of the day, what matters most is...</div>
+    </div>
+  </div>
+
+  <div class="score-note">
+    <strong>Scoring Reminder (CLB 10+):</strong> Examiners assess <em>Content/Coherence, Vocabulary, Listenability, and Task Fulfillment</em>. At Level 10, you must <strong>adjust style and tone to a broad range of audiences</strong>, <strong>convey ideas clearly</strong>, use <strong>some figures of speech and idioms</strong>, and speak with <strong>good control of complex grammatical structures</strong> with mostly fluent rhythm and intonation.
+  </div>
+</div>
+
+<!-- ===================== TASK 2 ===================== -->
+<div class="task-panel" id="task-1">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 2 — Talking about a Personal Experience</div>
+      <p class="task-desc">Describe a memorable personal experience related to a given theme. Use vivid detail, narrative structure, and reflective commentary.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 30 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 60 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> Use a clear narrative arc: Set the scene → develop the story with concrete and abstract details → reflect on the meaning/impact. Use vivid, varied vocabulary and figures of speech. Avoid listing events; create a story with emotional resonance.</span>
+  </div>
+
+  <div class="scenarios-label">Common Theme Types</div>
+  <div class="scenario-tabs">
+    <button class="s-tab active" onclick="showScenario('t2', 0)">Achievement / Challenge</button>
+    <button class="s-tab" onclick="showScenario('t2', 1)">Travel / New Place</button>
+    <button class="s-tab" onclick="showScenario('t2', 2)">Learning Something New</button>
+    <button class="s-tab" onclick="showScenario('t2', 3)">Unexpected Event</button>
+  </div>
+
+  <div class="scenario-content active" id="t2-s0">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Set the Scene (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>One experience that stands out in my memory is <span class="fill">[event/achievement]</span>. It happened about <span class="fill">[timeframe]</span>, and at the time, I had no idea how much it would shape the way I see <span class="fill">[relevant theme]</span>.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternatives</div>
+            <div class="variant-item v-open">If I think about a moment that genuinely tested my limits, it would have to be the time I... [situation]</div>
+            <div class="variant-item v-open">There's an experience from [timeframe] that I still reflect on quite often — it was the period when I had to...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Develop the Story with Detail (35–40 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>At the time, I was <span class="fill">[context — role, location, circumstances]</span>. The challenge I was facing was <span class="fill">[specific problem/goal]</span>, and what made it particularly daunting was <span class="fill">[complicating factor — time pressure, lack of resources, emotional difficulty, etc.]</span>.</p>
+            <p>I remember feeling <span class="fill">[emotion — overwhelmed / uncertain / determined]</span>, but I decided to <span class="fill">[key action you took]</span>. Looking back, that decision turned out to be <span class="fill">[pivotal / more difficult than I expected / surprisingly effective]</span> because <span class="fill">[reason/consequence]</span>.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Detail-Building Phrases</div>
+            <div class="variant-item v-mid">What struck me most was the realization that... / What I hadn't anticipated was...</div>
+            <div class="variant-item v-mid">Despite the initial setbacks, I managed to... / Against all odds, we were able to...</div>
+            <div class="variant-item v-mid">The turning point came when... / Everything changed the moment...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Reflect on the Meaning (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>That experience taught me <span class="fill">[key lesson or insight]</span>. To this day, it informs the way I approach <span class="fill">[relevant aspect of life/work]</span>, and I genuinely believe I came out of it a more <span class="fill">[resilient / patient / perceptive]</span> person.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternative Closings</div>
+            <div class="variant-item v-close">It wasn't easy, but I wouldn't trade that experience — it gave me a depth of understanding I couldn't have gained any other way.</div>
+            <div class="variant-item v-close">Looking back, I realize that the hardest moments often turn into the most formative ones.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t2-s1">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span></div>
+        <div class="block-body"><div class="template-text"><p>One trip that left a lasting impression on me was when I visited <span class="fill">[place]</span>. I'd been looking forward to it for a long time, but nothing quite prepared me for what it was actually like.</p></div></div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span></div>
+        <div class="block-body"><div class="template-text">
+          <p>I arrived in <span class="fill">[place]</span> during <span class="fill">[season/time]</span>, and the first thing that struck me was <span class="fill">[vivid sensory detail — the landscape, the sounds, the energy of the place]</span>. What I hadn't expected was <span class="fill">[surprising element — cultural difference, unexpected beauty, a challenge you encountered]</span>.</p>
+          <p>One particular moment that encapsulates the whole experience was when <span class="fill">[specific memorable event — a conversation, a sight, a moment of getting lost, etc.]</span>. It made me realize <span class="fill">[insight about culture / people / yourself]</span>.</p>
+        </div></div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span></div>
+        <div class="block-body"><div class="template-text"><p>That journey broadened my perspective in ways I hadn't anticipated. Experiencing a different way of life firsthand really challenges your assumptions and leaves you with a deeper appreciation for both the world and where you come from.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t2-s2">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span></div>
+        <div class="block-body"><div class="template-text"><p>One of the most rewarding experiences I've had was learning <span class="fill">[skill/subject]</span>. It was something I'd been meaning to try for years, and when I finally took the plunge, the journey turned out to be far more interesting than the destination.</p></div></div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span></div>
+        <div class="block-body"><div class="template-text">
+          <p>When I first started, I was genuinely out of my depth. <span class="fill">[Describe your early struggles with specific detail]</span>. I remember feeling a mixture of frustration and fascination — frustrated because <span class="fill">[reason]</span>, but fascinated because <span class="fill">[what kept drawing you in]</span>.</p>
+          <p>Over time, I developed a routine of <span class="fill">[how you practiced/learned]</span>, and gradually the pieces started to fall into place. The moment I realized I'd genuinely made progress was when <span class="fill">[specific milestone moment]</span>.</p>
+        </div></div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span></div>
+        <div class="block-body"><div class="template-text"><p>That experience reinforced something I now firmly believe: the process of learning something from scratch — with all the awkwardness and uncertainty it entails — is one of the most humbling and ultimately fulfilling things you can do for yourself.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t2-s3">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span></div>
+        <div class="block-body"><div class="template-text"><p>I can think of one particular situation that caught me completely off guard — it was the kind of event you simply can't plan for, and it ended up becoming one of the most memorable experiences of my life.</p></div></div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span></div>
+        <div class="block-body"><div class="template-text">
+          <p>It happened when <span class="fill">[describe the unexpected situation with context]</span>. My immediate reaction was <span class="fill">[emotional response — disbelief, alarm, laughter]</span>, and in that moment, I had to <span class="fill">[decision/action you took]</span>.</p>
+          <p>What unfolded next was <span class="fill">[how events played out]</span>. Looking back, I'm struck by how differently things could have gone if <span class="fill">[counterfactual — I had hesitated / made a different choice / not had the help I did]</span>.</p>
+        </div></div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span></div>
+        <div class="block-body"><div class="template-text"><p>That day reminded me that life rarely goes according to plan — and that sometimes the unscripted moments are the ones that teach you the most about yourself and the people around you.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">Narrative Connectors & Vivid Language for Task 2</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">What struck me most was...</div>
+      <div class="phrase-item">Against all odds,...</div>
+      <div class="phrase-item">The turning point came when...</div>
+      <div class="phrase-item">Looking back, I realize...</div>
+      <div class="phrase-item">What I hadn't anticipated was...</div>
+      <div class="phrase-item">It was a double-edged situation...</div>
+      <div class="phrase-item">It left an indelible mark on me</div>
+      <div class="phrase-item">In hindsight, it was a blessing in disguise</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TASK 3 ===================== -->
+<div class="task-panel" id="task-2">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 3 — Describing a Scene</div>
+      <p class="task-desc">Describe what you see in an image in rich, organized detail. Cover the setting, people, actions, atmosphere, and any notable elements.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 30 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 60 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> Move from general → specific. Describe: overall setting → foreground details → background → atmosphere/mood → any implied story. Use precise, descriptive vocabulary. Avoid simple listing — narrate with connecting language and inference.</span>
+  </div>
+
+  <div class="scenarios-label">Common Scene Types</div>
+  <div class="scenario-tabs">
+    <button class="s-tab active" onclick="showScenario('t3', 0)">Outdoor / Public Space</button>
+    <button class="s-tab" onclick="showScenario('t3', 1)">Workplace / Office</button>
+    <button class="s-tab" onclick="showScenario('t3', 2)">Home / Social Gathering</button>
+    <button class="s-tab" onclick="showScenario('t3', 3)">Commercial / Store</button>
+  </div>
+
+  <div class="scenario-content active" id="t3-s0">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Establish the Overall Scene (8–10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>The image depicts what appears to be <span class="fill">[general setting — a busy urban park / a quiet suburban street / a crowded market square]</span>. The overall atmosphere is <span class="fill">[lively and energetic / calm and peaceful / bustling and chaotic]</span>.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternative Openers</div>
+            <div class="variant-item v-open">What I see here is a scene set in [location], captured on what looks like a [season/time of day].</div>
+            <div class="variant-item v-open">This image shows an outdoor [setting] that gives off a distinctly [adjective] atmosphere.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Foreground → Background → Details (35–40 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>In the foreground, I can see <span class="fill">[main subjects — people, objects, activities]</span>. They appear to be <span class="fill">[what they're doing — e.g., engaged in conversation / walking briskly / gathered around something]</span>, which suggests <span class="fill">[implied context — they may be friends meeting up / commuters on their way to work]</span>.</p>
+            <p>Moving further into the scene, the background reveals <span class="fill">[distant elements — buildings, trees, vehicles, other people]</span>. The <span class="fill">[specific detail — colour of the sky / style of the architecture / condition of the path]</span> gives the scene a distinctly <span class="fill">[adjective — nostalgic / contemporary / vibrant]</span> quality.</p>
+            <p>What I find particularly striking about this image is <span class="fill">[a notable or interesting element — a contrast, a focal point, an implied story]</span>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Overall Impression / Inference (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>Overall, the scene conveys a sense of <span class="fill">[mood — everyday community life / leisure and connection / urban momentum]</span>. If I had to guess, this might have been taken during <span class="fill">[time/occasion/context]</span>, and it captures the <span class="fill">[essence / spirit / texture]</span> of that environment beautifully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t3-s1">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>The scene appears to take place in a <span class="fill">[office / conference room / open-plan workspace]</span>. The setting looks <span class="fill">[professional and organized / collaborative and informal / focused and task-oriented]</span>.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>In the foreground, there <span class="fill">[is a person / are several people]</span> who appear to be <span class="fill">[typing at a computer / reviewing documents together / presenting at a whiteboard]</span>. Their body language suggests <span class="fill">[concentration / collaboration / a discussion in progress]</span>.</p>
+        <p>The workspace itself features <span class="fill">[notable office elements — monitors, plants, whiteboards, filing cabinets]</span>. The <span class="fill">[lighting / layout / level of activity]</span> gives the impression that this is a <span class="fill">[busy deadline environment / casual team culture / formal corporate setting]</span>.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>The overall impression is one of <span class="fill">[productivity / collaboration / focused individual work]</span>. It's the kind of environment that seems <span class="fill">[conducive to creativity / structured for efficiency / built around teamwork]</span>.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t3-s2">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>The image appears to show a <span class="fill">[domestic interior / social gathering / family event]</span> taking place in what looks like <span class="fill">[a living room / a kitchen / a dining space]</span>. The mood is unmistakably <span class="fill">[warm and convivial / relaxed and casual / festive]</span>.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>The main focus of the scene is <span class="fill">[group of people / a person performing a domestic activity]</span>. They appear to be <span class="fill">[sharing a meal / celebrating an occasion / engaged in conversation]</span>, and there's a palpable sense of <span class="fill">[ease and familiarity / joy and connection]</span> in their interactions.</p>
+        <p>The surroundings are <span class="fill">[homey and well-lived-in / neatly decorated / festively arranged]</span>, with <span class="fill">[specific details — family photos on the wall / seasonal decorations / food spread on the table]</span> that add depth to the narrative of the scene.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>The scene evokes a strong sense of <span class="fill">[community / belonging / the simple pleasures of everyday life]</span>. It's the sort of image that feels both intimate and universally relatable.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t3-s3">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>The image shows what appears to be <span class="fill">[a grocery store / a shopping mall / a market / a retail shop]</span>. The environment looks <span class="fill">[busy and well-stocked / bright and commercial / crowded with shoppers]</span>.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>In the foreground, <span class="fill">[a shopper / a staff member / a group of people]</span> can be seen <span class="fill">[browsing the aisles / assisting a customer / making a purchase]</span>. The products on display include <span class="fill">[visible items]</span>, arranged in a way that seems <span class="fill">[deliberate and promotional / practical and functional]</span>.</p>
+        <p>What draws my attention is <span class="fill">[a particular element — a promotional display / the lighting / how the space is organized]</span>, which tells me something about <span class="fill">[the store's brand / the customer experience they're aiming for]</span>.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>Overall, the scene captures the familiar rhythm of <span class="fill">[consumer life / daily errands / community commerce]</span> — nothing extraordinary on the surface, yet full of small human moments if you look closely.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">Descriptive Vocabulary & Spatial Language for Task 3</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">In the foreground / background...</div>
+      <div class="phrase-item">To the left/right of the frame...</div>
+      <div class="phrase-item">What appears to be / what looks like...</div>
+      <div class="phrase-item">The scene conveys a sense of...</div>
+      <div class="phrase-item">Their body language suggests...</div>
+      <div class="phrase-item">What I find particularly striking is...</div>
+      <div class="phrase-item">The overall atmosphere is one of...</div>
+      <div class="phrase-item">There's a palpable sense of...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TASK 4 ===================== -->
+<div class="task-panel" id="task-3">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 4 — Making Predictions</div>
+      <p class="task-desc">Look at an image and predict what might happen next. Offer 2–3 plausible outcomes, linking them logically to what you observe in the scene.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 30 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 60 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> Use hedged prediction language ("It's quite likely that...", "I'd expect..."). Root each prediction in visible evidence from the image. Offer a primary prediction with reasoning, then one or two alternatives. Show sophisticated cause-and-effect thinking.</span>
+  </div>
+
+  <div class="template-grid">
+    <div class="template-block opening">
+      <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Briefly anchor to what you see (8 sec)</span></div>
+      <div class="block-body">
+        <div class="template-text">
+          <p>Based on what I can see in this image — <span class="fill">[quick description of the key elements]</span> — I can make a few reasonable predictions about what might unfold next.</p>
+        </div>
+        <div class="variants">
+          <div class="variants-label">Alternatives</div>
+          <div class="variant-item v-open">Looking at this scene, there are a number of directions things could go, depending on several factors I can identify in the image.</div>
+          <div class="variant-item v-open">The situation depicted here has a few telling signs that help me anticipate what comes next.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="template-block middle">
+      <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Primary + Secondary Predictions with Evidence (40 sec)</span></div>
+      <div class="block-body">
+        <div class="template-text">
+          <p>My primary prediction would be that <span class="fill">[most likely outcome]</span>. This seems probable because <span class="fill">[evidence from the image — body language, objects, spatial arrangement, expressions]</span>. Given that <span class="fill">[contextual clue]</span>, I'd expect this to result in <span class="fill">[consequence or next step]</span>.</p>
+          <p>Alternatively, it's also possible that <span class="fill">[secondary scenario]</span>. This might happen if <span class="fill">[condition or factor that could shift the outcome]</span>. The <span class="fill">[specific detail — e.g., the tension in their posture / the direction they're facing]</span> suggests that this outcome, while less likely, can't be ruled out.</p>
+          <p>In the best case scenario, <span class="fill">[optimistic prediction]</span>, which would suggest <span class="fill">[positive resolution]</span>.</p>
+        </div>
+        <div class="variants">
+          <div class="variants-label">Prediction Language (CLB 10+)</div>
+          <div class="variant-item v-mid">It's quite likely that... / I would expect... / There's a reasonable chance that...</div>
+          <div class="variant-item v-mid">Based on [evidence], my best guess would be... / The indicators suggest...</div>
+          <div class="variant-item v-mid">If things unfold as the image implies... / Assuming this trajectory continues...</div>
+          <div class="variant-item v-mid">The most plausible outcome, in my view, is... / What I'd anticipate is...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="template-block closing">
+      <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Acknowledge uncertainty / wrap up (10 sec)</span></div>
+      <div class="block-body">
+        <div class="template-text">
+          <p>Of course, predicting the future from a single snapshot is inherently limited, but the visual cues available in this image make <span class="fill">[primary prediction]</span> the most plausible conclusion. Whatever happens, the scene is clearly building toward some kind of <span class="fill">[resolution / confrontation / transition]</span>.</p>
+        </div>
+        <div class="variants">
+          <div class="variants-label">Alternative Closings</div>
+          <div class="variant-item v-close">While there's always an element of uncertainty, the weight of evidence points toward [primary prediction].</div>
+          <div class="variant-item v-close">Ultimately, it depends on how [key person/factor] responds — but I'd lean strongly toward [outcome].</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">Hedged Prediction Phrases for Task 4</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">It's quite likely that...</div>
+      <div class="phrase-item">I would anticipate that...</div>
+      <div class="phrase-item">The evidence suggests...</div>
+      <div class="phrase-item">In all probability...</div>
+      <div class="phrase-item">There's a distinct possibility that...</div>
+      <div class="phrase-item">If I had to make a prediction...</div>
+      <div class="phrase-item">This could well lead to...</div>
+      <div class="phrase-item">The most plausible outcome is...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TASK 5 ===================== -->
+<div class="task-panel" id="task-4">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 5 — Comparing & Persuading</div>
+      <p class="task-desc">Compare two options shown in images and persuade a specific person to choose one, tailoring your reasoning to their known needs and concerns.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 60 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 60 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> Tailor your argument directly to the specific person and their needs. Acknowledge the strengths of Option A briefly, then make a clear, persuasive case for Option B (or whichever you choose). Use comparative structures fluently. Close with a decisive recommendation.</span>
+  </div>
+
+  <div class="scenarios-label">Common Comparison Types</div>
+  <div class="scenario-tabs">
+    <button class="s-tab active" onclick="showScenario('t5', 0)">Two Locations / Venues</button>
+    <button class="s-tab" onclick="showScenario('t5', 1)">Two Products / Items</button>
+    <button class="s-tab" onclick="showScenario('t5', 2)">Two Plans / Arrangements</button>
+  </div>
+
+  <div class="scenario-content active" id="t5-s0">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Acknowledge the choice + Signal your recommendation (8 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>I've looked at both options carefully, and taking into account everything you've told me about <span class="fill">[the person's priorities — your budget / your schedule / what matters most to you]</span>, I'm firmly recommending <span class="fill">[Option A or B]</span>. Here's my thinking.</p>
+          </div>
+        </div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Comparative Argument (40 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>Now, I understand the appeal of <span class="fill">[the other option]</span> — particularly <span class="fill">[its strongest selling point, e.g., the lower cost / the central location / the modern design]</span>. That said, when you weigh it against what you actually need, I think it falls short in a few important ways.</p>
+            <p><span class="fill">[Your recommended option]</span>, on the other hand, offers <span class="fill">[key advantage #1 — e.g., significantly more space / a much better value for money / easier access to transit]</span>, which is directly relevant to <span class="fill">[the person's specific situation]</span>. Beyond that, it also provides <span class="fill">[advantage #2]</span>, and given that <span class="fill">[reason tied to their needs]</span>, this really tips the scales in its favour.</p>
+            <p>What also gives me confidence in this recommendation is <span class="fill">[a third supporting point or a counter to the other option's drawback]</span>.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Comparison Connectors</div>
+            <div class="variant-item v-mid">While [Option A] has its merits, [Option B] is clearly superior in terms of...</div>
+            <div class="variant-item v-mid">Compared to [Option A], [Option B] offers a much more [adjective] solution for your specific situation.</div>
+            <div class="variant-item v-mid">The key differentiator here is... / What ultimately sets [Option B] apart is...</div>
+          </div>
+        </div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Clear, decisive close (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>For all those reasons, I'm confident that <span class="fill">[Option B]</span> is the right call for you. You might have a moment of doubt when you see <span class="fill">[the other option's appeal]</span>, but I genuinely believe that once you <span class="fill">[experience it / make the move / see the results]</span>, you won't look back.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternative Closings</div>
+            <div class="variant-item v-close">Trust me on this one — [Option B] is far better suited to where you are and where you want to be.</div>
+            <div class="variant-item v-close">The choice ultimately comes down to [key factor], and on that measure, [Option B] wins without question.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t5-s1">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>Between these two options, I think the choice is actually clearer than it might first appear — especially given your specific situation. I'd go with <span class="fill">[product/item B]</span>, and here's why.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>The <span class="fill">[other option]</span> might seem attractive because of <span class="fill">[its price / its appearance / its brand recognition]</span>, but when you look closely, <span class="fill">[it has a notable limitation — less durable / fewer features / not well-suited to your use case]</span>.</p>
+        <p>My recommendation — <span class="fill">[Option B]</span> — addresses exactly what you need: <span class="fill">[key benefit #1]</span>, which will matter a great deal when <span class="fill">[practical situation]</span>. It also <span class="fill">[benefit #2]</span>, which means over time, you'll likely find it <span class="fill">[more cost-effective / more enjoyable / more reliable]</span>.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>I know it might feel like the bigger investment upfront, but the long-term value is genuinely there. Go with <span class="fill">[Option B]</span> — I think you'll be very glad you did.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t5-s2">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>After thinking through both plans carefully, I think <span class="fill">[Plan B]</span> is significantly better suited to what you're trying to accomplish — and I'd like to walk you through my reasoning.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p><span class="fill">[Plan A]</span> has a certain appeal in that <span class="fill">[its strength]</span>, but the challenge is that <span class="fill">[its limitation or trade-off]</span>. Given <span class="fill">[the person's constraints — time, budget, goals]</span>, that's a meaningful drawback.</p>
+        <p><span class="fill">[Plan B]</span>, however, aligns much better with what you need because <span class="fill">[reason 1]</span> and <span class="fill">[reason 2]</span>. Perhaps most importantly, it allows you to <span class="fill">[key outcome relevant to the person's goal]</span>, which I know is a priority for you.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>At the end of the day, both plans have their merits, but <span class="fill">[Plan B]</span> is simply the stronger fit for your circumstances. I'm confident you'll feel the difference quickly.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">Persuasive & Comparative Phrases for Task 5</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">While [A] has its merits...</div>
+      <div class="phrase-item">The key differentiator is...</div>
+      <div class="phrase-item">This directly addresses your need for...</div>
+      <div class="phrase-item">In the long run, [B] is far more...</div>
+      <div class="phrase-item">What sets [B] apart is...</div>
+      <div class="phrase-item">This tips the scales in favour of...</div>
+      <div class="phrase-item">Given your specific situation...</div>
+      <div class="phrase-item">I'm confident you'll find that...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TASK 6 ===================== -->
+<div class="task-panel" id="task-5">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 6 — Dealing with a Difficult Situation</div>
+      <p class="task-desc">You must leave a voicemail or spoken message to resolve a difficult or uncomfortable situation. Be direct, diplomatic, and solution-focused.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 60 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 60 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> Sound professional and calm even when discussing a problem. Identify yourself, state the situation clearly, propose a specific solution, and request follow-up. Avoid being aggressive or vague. Maintain a formal-to-semi-formal tone as a voicemail message.</span>
+  </div>
+
+  <div class="scenarios-label">Common Situation Types</div>
+  <div class="scenario-tabs">
+    <button class="s-tab active" onclick="showScenario('t6', 0)">Complaint to Service/Business</button>
+    <button class="s-tab" onclick="showScenario('t6', 1)">Apology / Explanatory Message</button>
+    <button class="s-tab" onclick="showScenario('t6', 2)">Requesting Accommodation</button>
+    <button class="s-tab" onclick="showScenario('t6', 3)">Neighbour / Community Issue</button>
+  </div>
+
+  <div class="scenario-content active" id="t6-s0">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Identify Yourself + State Purpose (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>Hello, my name is <span class="fill">[Your Name]</span>, and I'm calling regarding <span class="fill">[specific issue — an order I placed / a service I received / a recent visit to your location]</span>. I want to bring a concern to your attention, and I'm hoping we can resolve it together.</p>
+          </div>
+        </div>
+      </div>
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Describe the Problem + Propose a Solution (35–40 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>On <span class="fill">[date or timeframe]</span>, I <span class="fill">[describe the specific issue clearly and factually — received a damaged item / was overcharged / experienced poor service]</span>. I was <span class="fill">[quite surprised / genuinely disappointed / frustrated]</span>, especially given that I've been a loyal customer for <span class="fill">[duration]</span>.</p>
+            <p>I've already <span class="fill">[any steps already taken — checked the receipt / reviewed the terms of service / reached out via email]</span>, and the issue remains unresolved. What I'd like to request is <span class="fill">[specific resolution — a full refund / a replacement / a callback from your customer service manager]</span>. I think that would be a fair and reasonable outcome under the circumstances.</p>
+            <p>My reference number, if relevant, is <span class="fill">[number]</span>, and you can reach me at <span class="fill">[phone number]</span> or via email at <span class="fill">[address]</span>.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Tone Calibration Phrases</div>
+            <div class="variant-item v-mid">I'm not looking to cause any inconvenience — I simply want to... / I'm sure this is something we can sort out easily.</div>
+            <div class="variant-item v-mid">I understand these things happen, but I do think it warrants attention because...</div>
+            <div class="variant-item v-mid">I'd appreciate a prompt response, as this has already caused some disruption to...</div>
+          </div>
+        </div>
+      </div>
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Request Callback + Thank (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>I'd appreciate a callback at your earliest convenience — ideally by <span class="fill">[date]</span>. Thank you for taking the time to listen to this message, and I look forward to hearing from you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t6-s1">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>Hi <span class="fill">[Name]</span>, it's <span class="fill">[Your Name]</span>. I wanted to reach out right away because something has come up and I owe you both an explanation and an apology.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>Unfortunately, <span class="fill">[describe the situation honestly — I wasn't able to make it / I made an error that affected you / something unexpected came up]</span>. I completely understand if this has caused inconvenience, and I take full responsibility for <span class="fill">[your part in the situation]</span>.</p>
+        <p>To make things right, I'd like to <span class="fill">[proposed remedy — reschedule at a time that works for you / cover any costs this has caused / find another way to address the situation]</span>. Please know that this was not intentional, and I genuinely value <span class="fill">[our working relationship / your trust / the opportunity to make this right]</span>.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>Please give me a call when you have a moment — I'd like to speak with you directly and sort this out properly. Again, I'm truly sorry for any disruption this may have caused.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t6-s2">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>Good day, my name is <span class="fill">[Name]</span>, and I'm contacting you regarding a request for <span class="fill">[accommodation / adjustment / exception]</span> related to <span class="fill">[context — my tenancy / my workplace / my enrollment]</span>.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>The situation I find myself in is <span class="fill">[explain the circumstances clearly and without over-sharing]</span>. Due to <span class="fill">[reason — a medical issue / a family commitment / a financial change]</span>, I'm hoping you might be able to <span class="fill">[specific request — extend a deadline / adjust payment terms / grant a temporary exception]</span>.</p>
+        <p>I want to assure you that this is a temporary situation, and I'm committed to <span class="fill">[demonstrating good faith — fulfilling my obligations / making up any missed responsibilities]</span>. I have <span class="fill">[any supporting documentation available if needed]</span>.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>I'd be grateful if you could review this request and get back to me with your thoughts. I'm reachable at <span class="fill">[contact info]</span>. Thank you very much for your time and consideration.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t6-s3">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>Hello, my name is <span class="fill">[Name]</span> — I live at <span class="fill">[unit/address]</span>. I'm calling because there's a situation that's been affecting our community, and I'd like to address it respectfully.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>Over the past <span class="fill">[timeframe]</span>, I've noticed <span class="fill">[describe the issue — excessive noise / parking obstruction / waste disposal problems]</span>. While I recognize that <span class="fill">[person]</span> may not be aware of the impact this is having, it has been causing <span class="fill">[describe the effect — disruption to sleep / safety concerns / inconvenience for other residents]</span>.</p>
+        <p>I'm not looking to escalate things unnecessarily — I genuinely believe this can be resolved with a simple conversation. What I'd kindly request is <span class="fill">[specific behaviour change or accommodation]</span>. I'm very happy to meet and discuss this in person if that's preferable.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>I appreciate you taking the time to listen, and I look forward to finding a solution that works for everyone. Please feel free to reach me at <span class="fill">[contact]</span>. Thank you.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">Diplomatic & Professional Phrases for Task 6</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">I'm hoping we can resolve this together</div>
+      <div class="phrase-item">I take full responsibility for...</div>
+      <div class="phrase-item">I'm not looking to escalate this...</div>
+      <div class="phrase-item">What I'd kindly request is...</div>
+      <div class="phrase-item">I want to assure you that...</div>
+      <div class="phrase-item">I understand these things happen, but...</div>
+      <div class="phrase-item">I'd appreciate a prompt response</div>
+      <div class="phrase-item">I look forward to finding a solution</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TASK 7 ===================== -->
+<div class="task-panel" id="task-6">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 7 — Expressing Opinions</div>
+      <p class="task-desc">Share and defend your perspective on a social, community, or policy-related topic. Demonstrate nuanced reasoning and awareness of counterarguments.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 30 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 90 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> State your position clearly upfront. Develop 2–3 points with concrete reasoning, examples, or comparisons. Acknowledge the other side briefly to demonstrate balanced, sophisticated thinking. Conclude with a strong restatement of your position.</span>
+  </div>
+
+  <div class="scenarios-label">Common Topic Areas</div>
+  <div class="scenario-tabs">
+    <button class="s-tab active" onclick="showScenario('t7', 0)">Technology / Society</button>
+    <button class="s-tab" onclick="showScenario('t7', 1)">Environment / Lifestyle</button>
+    <button class="s-tab" onclick="showScenario('t7', 2)">Work / Education Policy</button>
+    <button class="s-tab" onclick="showScenario('t7', 3)">Community / Urban Issues</button>
+  </div>
+
+  <div class="scenario-content active" id="t7-s0">
+    <div class="template-grid">
+      <div class="template-block opening">
+        <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">State Position Clearly (10 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>My view on this is fairly clear: I <span class="fill">[strongly believe / am quite convinced]</span> that <span class="fill">[your position statement]</span>. While I understand that this is a topic on which people disagree, I think the evidence and reasoning support my position quite compellingly.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternative Openers</div>
+            <div class="variant-item v-open">This is an issue I feel strongly about. In my view, [position], and here's why I hold that perspective.</div>
+            <div class="variant-item v-open">When I consider all the factors involved, I come down firmly on the side of [position], for several reasons.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block middle">
+        <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Develop 2–3 Arguments + Acknowledge Counterpoint (60–65 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>To begin with, <span class="fill">[Argument #1 with concrete reasoning]</span>. This matters because <span class="fill">[real-world consequence or implication]</span>. We can see evidence of this in <span class="fill">[a relatable example — everyday life, a trend, a comparison with other contexts]</span>.</p>
+            <p>Beyond that, it's worth considering <span class="fill">[Argument #2 — ideally addressing a different dimension: social, economic, ethical, or practical]</span>. Research and common experience both suggest that <span class="fill">[supporting observation or example]</span>, which reinforces my position considerably.</p>
+            <p>Now, I'm aware that some people argue <span class="fill">[the strongest counterargument]</span>, and I think that's a legitimate concern. However, I'd respond to that by pointing out that <span class="fill">[your rebuttal]</span>. When you factor that in, the counterargument loses much of its force.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Opinion & Reasoning Connectors</div>
+            <div class="variant-item v-mid">The reason I hold this view is... / What informs my perspective here is...</div>
+            <div class="variant-item v-mid">Consider, for example, the fact that... / A clear illustration of this is...</div>
+            <div class="variant-item v-mid">While I understand the opposing view, I'd argue that... / That said, the counterpoint overlooks...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-block closing">
+        <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Restate + Broaden (15 sec)</span></div>
+        <div class="block-body">
+          <div class="template-text">
+            <p>Ultimately, I believe that <span class="fill">[restatement of position in different words]</span>. The decisions we make about <span class="fill">[topic]</span> now will have lasting consequences for <span class="fill">[future generations / our communities / the quality of our daily lives]</span>, and that's precisely why I think this issue deserves serious and thoughtful consideration.</p>
+          </div>
+          <div class="variants">
+            <div class="variants-label">Alternative Closings</div>
+            <div class="variant-item v-close">For all these reasons, I remain convinced that [position]. It's not the most popular view, perhaps, but I think it's the right one.</div>
+            <div class="variant-item v-close">In the final analysis, the evidence points in one direction — and that's toward [position].</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t7-s1">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>When it comes to <span class="fill">[environmental or lifestyle topic]</span>, I take a fairly strong position: I believe that <span class="fill">[your stance]</span>. And I say that not as an abstract ideal, but as a practical necessity.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>First, the evidence around <span class="fill">[topic — climate impact / public health / urban sustainability]</span> is increasingly difficult to ignore. <span class="fill">[Specific observation or trend]</span> demonstrates this more vividly than almost any other example I can think of.</p>
+        <p>From a personal and community standpoint, <span class="fill">[Argument #2 — how this affects everyday choices or quality of life]</span>. Many people underestimate <span class="fill">[the cumulative impact / how accessible small changes can be / how much individual choices matter at scale]</span>.</p>
+        <p>I do recognize that <span class="fill">[counterpoint — cost, inconvenience, systemic barriers]</span> makes this challenging for some people. But I think <span class="fill">[your rebuttal — collective action, policy support, gradual change]</span> is the more productive and realistic framing.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>At its core, this is about the kind of world we want to live in — and that's a question worth taking seriously regardless of where you land politically or philosophically.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t7-s2">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>On the question of <span class="fill">[work or education policy topic]</span>, I hold a fairly firm view: <span class="fill">[your position]</span>. I think the way we structure <span class="fill">[work / education / professional development]</span> has enormous implications for individuals and society as a whole.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>To begin with, <span class="fill">[argument anchored in equity, effectiveness, or well-being]</span>. The traditional approach — <span class="fill">[describe what you're arguing against]</span> — often fails to account for <span class="fill">[what it overlooks]</span>.</p>
+        <p>Furthermore, <span class="fill">[second argument — economic, social, or cultural dimension]</span>. We've seen this play out in <span class="fill">[real or hypothetical example]</span>, and the results speak for themselves.</p>
+        <p>Some would argue that <span class="fill">[counterargument]</span>, and I think that raises a fair point. My response to that is <span class="fill">[nuanced rebuttal that acknowledges complexity while holding your position]</span>.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>Ultimately, the choices we make about how we organize <span class="fill">[work/education]</span> aren't just logistical — they reflect deeper values about what we believe people are capable of and what they deserve. On that basis, I stand by my view that <span class="fill">[restatement]</span>.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-content" id="t7-s3">
+    <div class="template-grid">
+      <div class="template-block opening"><div class="block-header"><span class="block-tag">Opening</span></div><div class="block-body"><div class="template-text"><p>On the topic of <span class="fill">[community or urban issue]</span>, I think there's a clearer right answer than the debate sometimes suggests. My view is that <span class="fill">[position]</span>, and I'd like to walk through why I believe that.</p></div></div></div>
+      <div class="template-block middle"><div class="block-header"><span class="block-tag">Middle</span></div><div class="block-body"><div class="template-text">
+        <p>Living in or near a city, you see the effects of <span class="fill">[issue]</span> firsthand. <span class="fill">[Argument #1 grounded in lived experience or observable trend]</span>. This isn't abstract — it directly affects <span class="fill">[specific group or situation]</span>.</p>
+        <p>From a broader perspective, <span class="fill">[Argument #2 — economic, social equity, or long-term planning angle]</span>. Cities that have taken <span class="fill">[your position or approach]</span> seriously have tended to <span class="fill">[positive outcome]</span>, which to me is a powerful indication of what works.</p>
+        <p>The opposing view often centres on <span class="fill">[cost / disruption to existing patterns / personal freedom]</span>, which I respect. But in my view, <span class="fill">[rebuttal]</span>, and that consideration ultimately outweighs the concerns.</p>
+      </div></div></div>
+      <div class="template-block closing"><div class="block-header"><span class="block-tag">Closing</span></div><div class="block-body"><div class="template-text"><p>Communities thrive when they're willing to make thoughtful, sometimes difficult decisions for the collective good. That's the spirit in which I hold this view, and I think it's the right lens through which to approach <span class="fill">[topic]</span>.</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">Opinion, Reasoning & Counterargument Phrases for Task 7</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">My view on this is fairly clear...</div>
+      <div class="phrase-item">What informs my perspective is...</div>
+      <div class="phrase-item">A clear illustration of this is...</div>
+      <div class="phrase-item">I'd push back on that by noting...</div>
+      <div class="phrase-item">While I understand that view...</div>
+      <div class="phrase-item">The evidence points toward...</div>
+      <div class="phrase-item">This matters because, in practice...</div>
+      <div class="phrase-item">In the final analysis...</div>
+    </div>
+  </div>
+
+  <div class="score-note">
+    <strong>Task 7 at CLB 10+:</strong> At this level, you must <strong>communicate in moderately demanding non-routine situations</strong>, present information and <strong>support ideas with moderately complex reasons</strong>, use <strong>context-specific vocabulary and some figures of speech</strong>, and adjust your <strong>speaking style and tone to a broad range of audiences</strong>. Acknowledgement of counterarguments is a strong marker of upper-band performance.
+  </div>
+</div>
+
+<!-- ===================== TASK 8 ===================== -->
+<div class="task-panel" id="task-7">
+  <div class="task-header">
+    <div>
+      <div class="task-title">Task 8 — Describing an Unusual Situation</div>
+      <p class="task-desc">Look at a surprising or unusual image and describe what's happening, why it might be happening, and how you would feel or react if you were there.</p>
+    </div>
+    <div class="task-meta">
+      <span class="meta-pill prep">⏱ Prep: 30 sec</span>
+      <span class="meta-pill speak">🎙 Speak: 60 sec</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="tip-icon">◆</span>
+    <span><strong style="color:var(--accent3)">CLB 10+ Strategy:</strong> Go beyond surface description — speculate about the backstory, explain the unusual element, and inject personality through your imagined reaction. Use speculative and conditional language. Show abstract thinking: <em>why</em> is this unusual? What does it imply? How would a person reasonably respond?</span>
+  </div>
+
+  <div class="template-grid">
+    <div class="template-block opening">
+      <div class="block-header"><span class="block-tag">Opening</span><span class="block-title">Identify the Unusual Element (8–10 sec)</span></div>
+      <div class="block-body">
+        <div class="template-text">
+          <p>What we have here is genuinely unexpected — the image shows <span class="fill">[brief description of the unusual element]</span>, which is certainly not something you'd encounter every day. My immediate reaction upon seeing this would be <span class="fill">[honest reaction — complete surprise / amused disbelief / fascinated curiosity]</span>.</p>
+        </div>
+        <div class="variants">
+          <div class="variants-label">Alternative Openers</div>
+          <div class="variant-item v-open">I have to say, this is not a sight you see very often — [describe what's unusual]. The first thing I notice is how [jarring/surprising/comical/surreal] the scene is.</div>
+          <div class="variant-item v-open">At first glance, this scene appears almost normal — but on closer inspection, [the unusual element] makes it quite extraordinary.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="template-block middle">
+      <div class="block-header"><span class="block-tag">Middle</span><span class="block-title">Describe + Speculate + Personal Reaction (35–40 sec)</span></div>
+      <div class="block-body">
+        <div class="template-text">
+          <p>Looking at the scene more carefully, I can see <span class="fill">[detailed description of what's in the image — people, objects, setting, actions]</span>. What makes this so unusual is <span class="fill">[explain the incongruity — the combination of elements / the unexpected context / the behaviour that defies convention]</span>.</p>
+          <p>If I had to speculate about how this came to be, I'd imagine that <span class="fill">[plausible backstory — a bet / a celebration / an art project / a simple accident that escalated]</span>. There's something almost <span class="fill">[poetic / absurd / endearing / thought-provoking]</span> about <span class="fill">[the specific unusual element]</span> — it reminds me of <span class="fill">[a relevant comparison or figure of speech]</span>.</p>
+          <p>If I were actually present in this situation, I'd probably <span class="fill">[your imagined reaction — try to help / take a photo / ask what was going on / burst out laughing]</span>. <span class="fill">[Add a personal, authentic observation that makes your response feel genuine]</span>.</p>
+        </div>
+        <div class="variants">
+          <div class="variants-label">Speculative & Abstract Language</div>
+          <div class="variant-item v-mid">If I had to venture a guess, I'd say... / My best theory would be...</div>
+          <div class="variant-item v-mid">There's something almost [adjective] about this — it's the kind of scene that makes you...</div>
+          <div class="variant-item v-mid">What strikes me most is not just what's happening, but what it implies about...</div>
+          <div class="variant-item v-mid">In a strange way, this scene captures something quite human — namely...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="template-block closing">
+      <div class="block-header"><span class="block-tag">Closing</span><span class="block-title">Broader Reflection (10 sec)</span></div>
+      <div class="block-body">
+        <div class="template-text">
+          <p>Unusual situations like this one are a reminder that life rarely conforms to our expectations — and that <span class="fill">[broader insight — creativity thrives in unexpected places / people are endlessly surprising / sometimes the most memorable moments are the unplanned ones]</span>. I'd certainly leave that scene with a story worth telling.</p>
+        </div>
+        <div class="variants">
+          <div class="variants-label">Alternative Closings</div>
+          <div class="variant-item v-close">It's the kind of thing you'd never forget — a perfect example of the unpredictability that makes life interesting.</div>
+          <div class="variant-item v-close">Whatever the explanation, this scene is a testament to the fact that ordinary places can suddenly become very extraordinary ones.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phrases-box">
+    <div class="phrases-title">Speculative & Vivid Language for Task 8</div>
+    <div class="phrase-grid">
+      <div class="phrase-item">If I had to venture a guess...</div>
+      <div class="phrase-item">There's something almost [adj] about this</div>
+      <div class="phrase-item">It makes you stop and wonder...</div>
+      <div class="phrase-item">Against all expectations...</div>
+      <div class="phrase-item">What it implies is...</div>
+      <div class="phrase-item">In a strange way, this captures...</div>
+      <div class="phrase-item">It's the kind of scene that...</div>
+      <div class="phrase-item">My immediate instinct would be to...</div>
+    </div>
+  </div>
+
+  <div class="score-note">
+    <strong>Task 8 at CLB 10+:</strong> This task rewards candidates who go beyond description to <strong>interpret and reflect</strong>. Using abstract vocabulary, conditional structures ("If I were..."), and genuine personal reactions demonstrates the <em>communication in moderately demanding non-routine situations</em> and <em>adjustment of speaking style to a broad range of audiences</em> that define Level 10+ performance.
+  </div>
+</div>
+
+</div><!-- end main -->
+
+<script>
+function showTask(n) {
+  document.querySelectorAll('.task-panel').forEach((p, i) => {
+    p.classList.toggle('active', i === n);
+  });
+  document.querySelectorAll('.nav-tab').forEach((t, i) => {
+    t.classList.toggle('active', i === n);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showScenario(task, n) {
+  const contents = document.querySelectorAll(`[id^="${task}-s"]`);
+  contents.forEach((el, i) => el.classList.toggle('active', i === n));
+
+  // Update the scenario tabs for this task
+  const taskEl = document.getElementById(`task-${getTaskIndex(task)}`);
+  if (taskEl) {
+    taskEl.querySelectorAll('.s-tab').forEach((t, i) => {
+      t.classList.toggle('active', i === n);
+    });
+  }
+}
+
+function getTaskIndex(taskId) {
+  const map = { t1: 0, t2: 1, t3: 2, t5: 4, t6: 5, t7: 6 };
+  return map[taskId] ?? 0;
+}
+</script>
+</body>
+</html>
